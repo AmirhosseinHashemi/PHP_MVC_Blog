@@ -1,0 +1,15 @@
+{
+  "name": "user/mvc_learn",
+  "autoload": {
+    "psr-4": {
+      "app\\": "src"
+    }
+  },
+  "authors": [
+    {
+      "name": "Amirhossein",
+      "email": "4mirh03einhashemi@gmail.com"
+    }
+  ],
+  "require": {}
+}
