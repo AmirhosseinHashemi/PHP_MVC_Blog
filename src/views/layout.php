@@ -17,15 +17,14 @@
 </head>
 
 <body class="bg-light">
+    <header class="d-flex justify-content-center py-3 position-sticky top-0 start-0 end-0 bg-white shadow-sm">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#" class="nav-link <?= $title === "ایجاد بلاگ" ? "active" : "" ?>">ایجاد بلاگ</a></li>
+            <li class="nav-item"><a href="#" class="nav-link <?= $title === "بلاگ ها" ? "active" : "" ?>">بلاگ ها</a></li>
+        </ul>
+    </header>
     <div class="container">
-        <header class="d-flex justify-content-center py-3">
-            <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#" class="nav-link <?= $title === "ایجاد بلاگ" ? "active" : "" ?>">ایجاد بلاگ</a></li>
-                <li class="nav-item"><a href="#" class="nav-link <?= $title === "بلاگ ها" ? "active" : "" ?>">بلاگ ها</a></li>
-            </ul>
-        </header>
-
-        <main>
+        <main class="mt-5">
             <?= $content ?>
         </main>
 

@@ -16,10 +16,9 @@ class Database
         self::$db = $this;
     }
 
-    public function getData()
+    public function get_blogs()
     {
-        $query = $this->pdo->prepare('SELECT * FROM :article');
-        $query->bindValue(":article", 'article');
+        $query = $this->pdo->prepare("SELECT * FROM article");
         $query->execute();
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }

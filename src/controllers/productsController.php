@@ -8,6 +8,10 @@ class ProductsController
 {
     public static function index(Router $router)
     {
-        echo "Index page";
+        $blogs = $router->db->get_blogs();
+        $router->render_views('blogs/blogs', [
+            'blogs' => $blogs,
+            "title" => "بلاگ ها"
+        ]);
     }
 }
