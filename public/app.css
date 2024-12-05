@@ -5,3 +5,15 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.max-w-500 {
+  max-width: 350px;
+}
+
+.text-err {
+  font-size: 13px;
+}
