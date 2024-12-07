@@ -19,11 +19,12 @@ class BlogsController
     public static function create(Router $router)
     {
         $blog_data = [];
+        $categories = $router->db->get_categories();
 
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $blog_data["title"] = $_POST["title"];
             $blog_data["text"] = $_POST["text"];
-            $blog_data["category"] = $_POST["category"];
+            $blog_data["category_id"] = $_POST["category"];
             $blog_data["image_file"] = $_FILES["image"];
 
             $blog = new Blog();
@@ -35,6 +36,7 @@ class BlogsController
         }
 
         $router->render_views('blogs/create', [
+            "categories" => $categories,
             "route" => "/blogs/create"
         ]);
     }

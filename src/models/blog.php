@@ -10,7 +10,7 @@ class Blog
     public ?int $id = null;
     public string $title;
     public string $text;
-    public string $category;
+    public string $category_id;
     public array $image_file;
     public ?string $image_path = null;
 
@@ -18,7 +18,7 @@ class Blog
     {
         $this->title = $data["title"];
         $this->text = $data["text"];
-        $this->category = $data["category"];
+        $this->category_id = $data["category_id"];
         $this->image_file = $data["image_file"];
         $this->image_path = $data["image_path"] ?? null;
     }
@@ -39,8 +39,8 @@ class Blog
             $error["text"] = "متنی برای مقاله وارد کنید.";
         }
 
-        if (!$this->category) {
-            $error["category"] = "دسته بندی مقاله را انتخاب کنید.";
+        if (!$this->category_id) {
+            $error["category_id"] = "دسته بندی مقاله را انتخاب کنید.";
         }
 
         if (empty($error)) {
@@ -55,7 +55,7 @@ class Blog
         }
 
         $db = Database::$db;
-        if ($this->id) $db->create_blog($this);
+        if (!$this->id) $db->create_blog($this);
         else $db->update_blog($this);
     }
 }

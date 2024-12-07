@@ -15,7 +15,7 @@
     <?php foreach ($blogs as $blog) : ?>
         <div class="col-5 g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-primary-emphasis"><?= $blog["category"] ?></strong>
+                <strong class="d-inline-block mb-2 text-primary-emphasis"><?= $blog["category_name"] ?></strong>
                 <h3 class="mb-0"><?= $blog["title"] ?></h3>
                 <div class="mb-1 text-body-secondary">آذر</div>
                 <p class="card-text mb-auto"><?= substr($blog["text"], 0, 150) . '...' ?></p>
