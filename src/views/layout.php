@@ -16,15 +16,15 @@
     <link href="/app.css" rel="stylesheet">
 </head>
 
-<body class="bg-light">
+<body dir="rtl" class="bg-light">
     <header class="d-flex justify-content-center py-3 position-sticky top-0 start-0 end-0 bg-white shadow-sm">
         <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link <?= $title === "ایجاد بلاگ" ? "active" : "" ?>">ایجاد بلاگ</a></li>
-            <li class="nav-item"><a href="#" class="nav-link <?= $title === "بلاگ ها" ? "active" : "" ?>">بلاگ ها</a></li>
+            <li class="nav-item"><a href="/blogs/create" class="nav-link <?= $route === "/blogs/create" ? "active" : "" ?>">ایجاد بلاگ</a></li>
+            <li class="nav-item"><a href="/" class="nav-link <?= $route === "/" ? "active" : "" ?>">بلاگ ها</a></li>
         </ul>
     </header>
     <div class="container">
-        <main class="mt-5">
+        <main class="d-flex justify-content-center align-items-center mt-3">
             <?= $content ?>
         </main>
 
