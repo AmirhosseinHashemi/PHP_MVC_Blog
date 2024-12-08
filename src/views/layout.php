@@ -17,7 +17,7 @@
 </head>
 
 <body dir="rtl" class="bg-light">
-    <header class="d-flex justify-content-center py-3 position-sticky top-0 start-0 end-0 bg-white shadow-sm">
+    <header class="z-3 d-flex justify-content-center py-3 position-sticky top-0 start-0 end-0 bg-white shadow-sm">
         <ul class="nav nav-pills">
             <li class="nav-item"><a href="/blogs/create" class="nav-link <?= $route === "/blogs/create" ? "active" : "" ?>">ایجاد بلاگ</a></li>
             <li class="nav-item"><a href="/" class="nav-link <?= $route === "/" ? "active" : "" ?>">بلاگ ها</a></li>
@@ -27,10 +27,6 @@
         <main class="d-flex justify-content-center align-items-center mt-3">
             <?= $content ?>
         </main>
-
-        <footer class="py-3 position-fixed bottom-0 start-0 end-0">
-            <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
-        </footer>
     </div>
 </body>
 
