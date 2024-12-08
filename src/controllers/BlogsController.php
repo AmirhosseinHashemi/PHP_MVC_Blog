@@ -16,6 +16,17 @@ class BlogsController
         ]);
     }
 
+    public static function blog(Router $router)
+    {
+        $id = $_GET["id"];
+        $blog = $router->db->get_blog_by_id($id);
+
+        $router->render_views('blogs/blog', [
+            'blog' => $blog[0],
+            "route" => "/blog"
+        ]);
+    }
+
     public static function create(Router $router)
     {
         $blog_data = [];

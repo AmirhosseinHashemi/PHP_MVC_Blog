@@ -19,7 +19,7 @@
                 <h3 class="mb-0"><?= $blog["title"] ?></h3>
                 <div class="mb-1 text-body-secondary">آذر</div>
                 <p class="card-text mb-auto"><?= substr($blog["text"], 0, 150) . '...' ?></p>
-                <a href="blog/<?= $blog["id"] ?>" class="btn btn-primary mt-3 align-self-end">
+                <a href="blog?id=<?= $blog["id"] ?>" class="btn btn-primary mt-3 align-self-end">
                     ادامه
                     <!-- <svg class="bi">
                         <use xlink:href="#chevron-right"></use>

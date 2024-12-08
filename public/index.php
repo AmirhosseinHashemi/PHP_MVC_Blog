@@ -11,6 +11,7 @@ $router = new Router($db);
 
 
 $router->get("/", [BlogsController::class, "index"]);
+$router->get("/blog", [BlogsController::class, "blog"]);
 $router->get("/blogs", [BlogsController::class, "index"]);
 
 $router->get("/blogs/create", [BlogsController::class, "create"]);

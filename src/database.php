@@ -27,6 +27,18 @@ class Database
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function get_blog_by_id($id)
+    {
+        $query = $this->pdo->prepare("SELECT article.*, categories.category_name, users.first_name, users.last_name
+                                         FROM article
+                                         JOIN categories ON article.category_id = categories.id
+                                         JOIN users ON article.user_id = users.id WHERE article.id=:id");
+        $query->bindValue(":id", $id);
+        $query->execute();
+
+        return $query->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function create_blog(Blog $blog)
     {
         $query = $this->pdo->prepare("INSERT INTO article
